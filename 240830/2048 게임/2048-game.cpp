@@ -52,14 +52,11 @@ void solve(int d){
 
     int chk = -1;
 
-    if(d == 2){
+    if(d == 2 || d == 3){
         rotate(0);
     }
-    else if(d == 3){
-        rotate(1);
-    }
     // 좌측으로 수행
-    if(d == 0 || d == 2){
+    if(d == 0 || d== 2){
         for(int i=0;i<n;i++){
             int push_idx = 0;
             chk = -1;
@@ -85,8 +82,7 @@ void solve(int d){
             }
         }
     }
-    // 우측으로 수행
-    if(d == 1 || d == 3){
+    else{
         for(int i=n-1;i>=0;i--){
             int push_idx = n-1;
             chk = -1;
